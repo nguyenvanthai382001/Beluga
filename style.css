@@ -1,0 +1,138 @@
+ body {
+    background: #fdc96c;
+  	background-image: url('./img/citybis2.png');
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	/* background-size: 100% auto; */
+	background-attachment: fixed;
+    --bg-dark : #2E343B;
+    --backgr-color: #FDC96C;
+    --text-color: #31456A;
+}
+body.active{
+    background-color: var(--bg-dark);
+    --text-color: #7B8499;
+}
+.citypart1 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: rotate-90 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+
+}
+
+.citypart2 {
+    position: fixed;
+    left: 38%;
+    bottom: -119px;
+    z-index: -1;
+    animation: rotate-90 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate both;
+}
+
+@keyframes rotate-90{
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+
+.button-con {
+    cursor: default;
+    position: fixed;
+    right: 5px;
+    top: 20px;
+    z-index: 10;
+}
+  
+#dayIcon {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: -5px;
+    margin: 0 7px;
+    fill: var(--text-color);
+}
+  
+#nightIcon {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: -5px;
+    margin: 0 7px;
+    fill: var(--text-color);
+}
+  
+#dayIcon, #nightIcon {
+    cursor: pointer;
+}
+
+
+
+.cmn-toggle {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .cmn-toggle + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  
+  input.cmn-toggle-round + label {
+    box-sizing: border-box;
+    padding: 2px;
+    width: 70px;
+    height: 36px;
+    /* background-color: #dddddd; */
+    border: 2px solid var(--text-color);
+    border-radius: 60px;
+  }
+  
+  input.cmn-toggle-round + label:before,
+  input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    content: "";
+
+  }
+  
+  input.cmn-toggle-round + label:before {
+    right: 1px;
+    border-radius: 60px;
+  }
+  
+  input.cmn-toggle-round + label:after {
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition:  0.4s;
+    background-color: var(--text-color);
+    
+  }
+  
+  input.cmn-toggle-round:checked + label:before {
+    background-color: unset;
+  }
+  input.cmn-toggle-round:checked + label:after {
+    margin-left: 34px;
+  }
+
+
+@media screen and (max-width: 576px){
+    .citypart1 {
+        display: none;
+    }
+}
