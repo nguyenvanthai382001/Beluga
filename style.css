@@ -33,7 +33,7 @@ body.active{
 }
 .citypart3 {
     position: fixed;
-    height: 100px;
+    height: 150px;
     right: 15%;
     bottom: 10%;
     z-index: -2;
@@ -45,7 +45,7 @@ body.active{
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-60%);
+        transform: translateY(-30%);
 
     }
 }
@@ -179,6 +179,6 @@ body.active{
         display: none;
     }
     .citypart3 {
-        display: none;
+        right: 5%;
     }
 }
